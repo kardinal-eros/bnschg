@@ -8,7 +8,6 @@ The identification key for protected areas according to § 30 BNatSchG / Art. 23
 
 
 ## Installation
-------------
 
 You may directly install the package from GitHub using the below set of commands.
 
