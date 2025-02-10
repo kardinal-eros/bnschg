@@ -152,7 +152,7 @@ validate.tab34 <- function (x, y, plot = "") {
 #' @param x A dataset containing species data.
 #' @param y A dataset containing species information for Tab34.
 #' @param plot A string specifying the plot to analyze.
-#' @param plot A treshold value (9 or 12).
+#' @param treshold A treshold value (9 or 12).
 #' @return A list containing the validation results.
 #' @export
 validate.tab36 <- function (x, y, plot = "", treshold = 9) {

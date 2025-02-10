@@ -11,7 +11,9 @@ validate.tab36(x, y, plot = "", treshold = 9)
 
 \item{y}{A dataset containing species information for Tab34.}
 
-\item{plot}{A treshold value (9 or 12).}
+\item{plot}{A string specifying the plot to analyze.}
+
+\item{treshold}{A treshold value (9 or 12).}
 }
 \value{
 A list containing the validation results.
