@@ -144,3 +144,47 @@ validate.tab34 <- function (x, y, plot = "") {
 		assigments = zi[ , -grep(c("plot|layer|cov"), names(zi)) ])
 	return(r)
 }
+
+#' Validate Tab36 Conditions
+#'
+#' This function checks if the species data in a plot meets the conditions specified for Tab36.
+#'
+#' @param x A dataset containing species data.
+#' @param y A dataset containing species information for Tab34.
+#' @param plot A string specifying the plot to analyze.
+#' @param plot A treshold value (9 or 12).
+#' @return A list containing the validation results.
+#' @export
+validate.tab36 <- function (x, y, plot = "", treshold = 9) {
+	#	x = imm; y = tab.36; plot = "imm02"; treshold = 9
+	xi <- x[ plot ]
+	xi <- taxonomy(taxonomy(xi))
+	zi <- species(y)
+
+	i <- zi$abbr %in% xi$abbr
+	zi <- zi[ i, ]
+	
+	if (nrow(zi) >= 9) {
+		conditions.fullfilled <- TRUE
+		ri <- species(species(x[ plot ]))
+		ri <- ri[ xi$abbr %in% zi$abbr, ]
+		ri.frequent <- ri[ ri$cov != "r", ] # eingestreut
+		ri.frequent <- ri.frequent[ ri.frequent$cov != "+", ] # eingestreut		
+		if (nrow(ri.frequent >= 1)) {
+			conditions.fullfilled <- TRUE
+			conditions <- paste0(nrow(ri), " species (", paste0(ri$abbr, collapse = " "), ")")
+		} else {
+			conditions.fullfilled <- FALSE
+			conditions <- paste0(0, " species")
+		}
+	} else {
+		conditions.fullfilled <- FALSE
+		conditions <- paste0(0, " species")		
+	}
+	
+	r <- list(
+		conditions.fullfilled = conditions.fullfilled,
+		conditions = conditions,
+		assigments = zi[ , -grep(c("plot|layer|cov"), names(zi)) ])
+	return(r)
+}

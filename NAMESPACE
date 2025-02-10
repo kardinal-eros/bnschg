@@ -2,3 +2,4 @@
 
 export(validate.tab34)
 export(validate.tab35)
+export(validate.tab36)

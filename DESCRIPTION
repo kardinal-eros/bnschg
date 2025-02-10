@@ -1,14 +1,15 @@
 Package: bnschg
 Title: Ecological Species Evaluation.
 Version: 0.1
+Date: 2025-02-10
 Authors@R: 
     person("Roland", "Kaiser", , "kardinal.eros@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: 
+           comment = c(ORCID = "0000-0002-2487-9289"))
+Description: The identification key for protected areas according to § 30 BNatSchG / Art. 23 BayNatSchG serves as a tool for the identification of legally protected biotopes in Germany, including the Free State of Bavaria. The identification key provides detailed criteria for the recognition of protected areas. It categorises different biotope types on the basis of specific site conditions and vegetation characteristics (lists of typical species). The BayNatSchG adds additional biotope types such as orchard meadows or species-rich grasslands. This package builds on the vegsoup package and provides tools to automatically categorise vegetation plot data of grassland types (Tables 34, 35, and 36).
+License: GPL (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Imports:
   vegsoup,
   dplyr
