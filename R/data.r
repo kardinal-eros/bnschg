@@ -10,18 +10,18 @@
 #' A dataset containing species information for Tab34.
 #'
 #' @format A data frame with species information.
-"tab34"
+"tab.34"
 
 #' Example Dataset: tab35
 #'
 #' A dataset containing species information for Tab35.
 #'
 #' @format A data frame with species information.
-"tab35"
+"tab.35"
 
 #' Example Dataset: tab36
 #'
 #' A dataset containing species information for Tab36.
 #'
 #' @format A data frame with species information.
-"tab36"
+"tab.36"
